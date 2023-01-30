@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Tag Blocker",
+    "version": "0.1.0",
+    "description": "This extension blocks videos with certain keywords in YouTube home page and channel pages.",
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://*.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "24": "icon.png",
+            "32": "icon.png"
+        },
+        "default_title": "YouTube Tag Blocker",
+        "default_popup": "popup.html"
+    }
+}
