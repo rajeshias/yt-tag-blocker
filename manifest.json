@@ -5,7 +5,8 @@
     "description": "This extension blocks videos with certain keywords in YouTube home page and channel pages.",
     "permissions": [
         "storage",
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
     "host_permissions": [
         "https://*.youtube.com/*"
@@ -20,7 +21,8 @@
             ],
             "js": [
                 "content.js"
-            ]
+            ],
+            "run_at": "document_start"
         }
     ],
     "action": {

@@ -2,17 +2,20 @@
 <html>
 
 <head>
-    <style>
-        #keywords {
-            width: 200px;
-            height: 150px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Tag Blocker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <textarea id="keywords"></textarea><br>
-    <button id="save">Save</button>
+    <h1>Tag Blocker</h1>
+    <div id="list">
+        <!-- List items will be displayed here -->
+    </div>
+    <div>
+        <input type="text" id="itemInput">
+        <button id="addButton">Add</button>
+    </div>
     <script src="popup.js"></script>
 </body>
 
